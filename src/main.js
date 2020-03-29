@@ -14,11 +14,16 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 import {Button} from 'mint-ui'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import VueLazyload from 'vue-lazyload'
 import './assets/css/public/reset.css'
 import './assets/js/flexible.js'
 //import '../build/build.js'
+
+import VueJsonp from 'vue-jsonp'
+Vue.use(VueJsonp)
+//通过use方法，挂载到vue中
 
 // 图片懒加载
 Vue.use(VueLazyload, {    

@@ -18,15 +18,21 @@
         <!-- 文章详情 -->
         <div class="contentNews">
             {{abstract}}
+
+            
             <img :src="img.url" alt="" v-for="(img,index) in image_list" :key="index">
         </div>
+
         
+<!-- 
         <div class="keywords">
             <span v-for="(item,index) in keywords.split(',')" :key="index">
 				{{item}}
 			</span>
-        </div>
+        </div> -->
         <hr>
+        <!-- 评论 -->
+        <cont class="comm" :group_id="group_id" :item_id="item_id"></cont>
 
         <div class="zan">
             <Button  size="large" icon="thumbsup" shape="circle">{{repin_count}}</Button>
@@ -42,7 +48,9 @@
 import headerBar from '../components/Header-bar.vue'
 import shareBox from '../components/Share.vue'
 import comment from '../components/Comment.vue'
+import cont from '../components/cont.vue'
 import * as type from '../store/mutation-types.js'
+import jsonp from 'jsonp'
 import {
     mapActions,
     mapGetters
@@ -52,12 +60,15 @@ export default {
     components: {
         headerBar,
         shareBox,
-        comment
+        comment,
+        cont
     },
     data(){
         return {
             media_info:this.$route.params.media_info,
-            title:this.$route.params.title
+            title:this.$route.params.title,
+            //article,
+            // tag_id
         }
     },
     methods: {
@@ -97,14 +108,28 @@ export default {
                 return ''
             }
         },
-        abstract:function(){
+        abstract:function(){//摘要
             if(this.$route.params.abstract){
                 return this.$route.params.abstract
             }else{
                 return ''
             }
         },
-        image_list:function(){
+        group_id:function() {  //文章内容id
+            if(this.$route.params.group_id){
+                return this.$route.params.group_id
+            }else{
+                return ''
+            }
+        },
+        item_id:function() {  //文章内容id
+            if(this.$route.params.item_id){
+                return this.$route.params.item_id
+            }else{
+                return ''
+            }
+        },
+        image_list:function(){//图片
             if(this.$route.params.image_list){
                 return this.$route.params.image_list
             }else{
@@ -132,13 +157,14 @@ export default {
                 return ''
             }
         },
+        
     },
     watch: {
         '$route': function() {
             this.$store.commit(type.SHOWSHAREBOX, false)
         }
-    }
-}
+    },
+    } 
 </script>
 <style lang="less">@import '../assets/css/border.less';
 #detail {

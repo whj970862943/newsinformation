@@ -7,7 +7,7 @@ import getters from './getters.js'
 Vue.use(Vuex);
 
 const state = {
-    userInfo: {}, // 用户信息
+    userInfo: {},           // 用户信息
     loading: true,         //新闻列表切换时loading图片的展示
     ifReturnMsg: '',       //是否有数据返回
     userName: JSON.parse(localStorage.getItem('userName')) || {},       //用户名

@@ -1,10 +1,12 @@
 <template>
 <div id="home" class="clearfix">
+    
     <headerBar>
         <div slot="home" class="home-header-bar">
             <!-- <Icon type="ios-email" size="30" color="#fff" class="fl homeEmail"></Icon> -->
             <span class="logo">
                 今日资讯
+                
                 <!-- <Icon type="ios-refresh-empty" size="30"></Icon> -->
             </span>
             <router-link to="/search" class="search fr">
@@ -34,6 +36,11 @@
                             media_name:val.media_name,
                             datetime:val.datetime,
                             abstract:val.abstract,
+
+                            tag_id:val.tag_id, //详情id
+                            group_id:val.group_id,
+                            item_id:val.item_id,
+                            
                             image_list:val.image_list,
                             repin_count:val.repin_count,
                             comment_count:val.comment_count,
