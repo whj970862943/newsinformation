@@ -11,11 +11,11 @@
           <div class="bottom_nav_icon icon_2"></div>
           <div class="bottom_nav_text">收藏</div>
         </router-link>
-        <router-link to="/care" class="navItems">
-          <!-- <Icon type="ios-heart" size="22"></Icon> -->
+        <!-- <router-link to="/care" class="navItems">
+        
           <div class="bottom_nav_icon icon_3"></div>
           <div class="bottom_nav_text">关注</div>
-        </router-link>
+        </router-link> -->
         <router-link to="/my" class="navItems">
           <!-- <Icon type="person" size="22"></Icon> -->
           <div class="bottom_nav_icon icon_4"></div>
@@ -53,7 +53,7 @@ export default {
     .navItems {
         display: block;
         float: left;
-        width: 25%;
+        width: 33.3%;
         height: 100%;
         color: #999;
         padding-top: 5px;

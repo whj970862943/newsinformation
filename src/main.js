@@ -3,7 +3,7 @@ import App from './App.vue'
 
 import router from './router/router.js'
 import store from './store/index.js'
-
+// import "bootstrap/dist/css/bootstrap.min.css"
 import moment from 'moment'
 import animate from 'animate.css'
 
@@ -14,7 +14,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 import {Button} from 'mint-ui'
-import "bootstrap/dist/css/bootstrap.min.css"
+
 
 import VueLazyload from 'vue-lazyload'
 import './assets/css/public/reset.css'

@@ -7,15 +7,20 @@ import Care from '../views/Care.vue'
 import My from '../views/My.vue'
 import Login from '../views/Login/Login.vue'
 
+
 import Detail from '../views/Detail.vue'
 import Selfpage from '../views/Selfpage.vue'
 import Editprofile from '../views/Editprofile.vue'
 import Setup from '../views/Setup.vue'
 import Search from '../views/Search.vue'
+import qddetail from '../views/qddetail.vue'
+
+
 
 Vue.use(Router);
 
-const routes = [{
+const routes = [
+    {
         path: '/home/:type',
         component: Home,
         name: 'home'
@@ -39,6 +44,11 @@ const routes = [{
         path: '/newsDetail/:id',
         component: Detail,
         name: 'newsdetail'
+    },
+    {
+        path: '/qddetail',
+        component: qddetail,
+        name: 'qdddetail'
     },
     {
         path: '/selfpage',

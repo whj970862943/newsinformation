@@ -6,7 +6,7 @@
   			<!-- <Icon type="person-add" size="28" class="fr addFriends" color="#000"></Icon> -->
   			<router-link to="/collect/my">收藏</router-link>
   			<router-link to="/collect/readhistory ">阅读</router-link>
-  			<router-link to="/collect/sendhistory ">推送</router-link>
+  			<router-link to="/collect/sendhistory ">推送</router-link> 
   		</div>
   	</headerBar>
     <div class="collect_content">
@@ -21,6 +21,8 @@
                             media_name:item.media_name,
                             datetime:item.datetime,
                             abstract:item.abstract,
+                            group_id:item.group_id,
+                            item_id:item.item_id,
                             image_list:item.image_list,
                             repin_count:item.repin_count,
                             comment_count:item.comment_count,
@@ -133,8 +135,8 @@ export default {
                     .collect_name {
                         margin-right: 0.2rem;
                     }
-                    .collect_comment {
-                        }
+                    // .collect_comment {
+                    //     }
                 }
             }
         }

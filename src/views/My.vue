@@ -10,7 +10,7 @@
     <section class="profile-number">
       <router-link :to="userInfo._id ? '/Selfpage': '/login'" class="profile-link">
         <div class="profile_image" v-if="userInfo._id">
-          <i class="iconfont icon-person"></i>
+          <img src="../assets/imgs/head.jpg" alt="" class="fr headPic">
         </div>
 
         <div class="user-info">
@@ -19,7 +19,7 @@
                 <span class="user-icon">
                   <i class="iconfont icon-shouji icon-mobile"></i>
                 </span>
-            <span class="icon-mobile-number">{{userInfo.phone || '暂无绑定手机号'}}</span>
+            <span class="icon-mobile-number">{{ userInfo.phone || '暂无绑定手机号'}}</span>
           </p>
         </div>
         <span class="arrow">
@@ -28,35 +28,19 @@
       </router-link>
       <div class="grid grid1">
           <div class="item">
-            <div class="colorWhite">0</div>
+            <div class="colorWhite">100</div>
             <div class="colorGray">动态</div>
           </div>
           <div class="item">
-            <div class="colorWhite">0</div>
+            <div class="colorWhite">1314</div>
             <div class="colorGray">关注</div>
           </div>
           <div class="item">
-            <div class="colorWhite">0</div>
+            <div class="colorWhite">521</div>
             <div class="colorGray">粉丝</div>
           </div>
         </div>
     </section>
-    <!-- <section class="profile_info_data border-1px">
-      <ul class="info_data_list">
-        <a href="javascript:" class="info_data_link">
-          <span class="info_data_top"><span>0.00</span>元</span>
-          <span class="info_data_bottom">我的余额</span>
-        </a>
-        <a href="javascript:" class="info_data_link">
-          <span class="info_data_top"><span>0</span>个</span>
-          <span class="info_data_bottom">我的优惠</span>
-        </a>
-        <a href="javascript:" class="info_data_link">
-          <span class="info_data_top"><span>0</span>分</span>
-          <span class="info_data_bottom">我的积分</span>
-        </a>
-      </ul>
-    </section> -->
     <section class="profile_my_order border-1px">
       
       <a href='javascript:' class="my_order">
@@ -66,8 +50,30 @@
         <div class="my_order_div">
           <span>消息通知</span>
           <span class="my_order_icon">
-                <i class="iconfont icon-jiantou1"></i>
-              </span>
+              <i class="iconfont icon-jiantou1"></i>
+          </span>
+        </div>
+      </a>
+      <a href='javascript:' class="my_order">
+            <span>
+              <i class="iconfont icon-order-s"></i>
+            </span>
+        <div class="my_order_div">
+          <span>广告推广</span>
+          <span class="my_order_icon">
+              <i class="iconfont icon-jiantou1"></i>
+          </span>
+        </div>
+      </a>
+      <a href='javascript:' class="my_order">
+            <span>
+              <i class="iconfont icon-order-s"></i>
+            </span>
+        <div class="my_order_div">
+          <span>用户反馈</span>
+          <span class="my_order_icon">
+              <i class="iconfont icon-jiantou1"></i>
+          </span>
         </div>
       </a>
       <!-- 积分商城 -->
@@ -234,12 +240,21 @@
           float left
           width 60px
           height 60px
+          margin-left 10px
           border-radius 50%
           overflow hidden
           vertical-align top
-          .icon-person
-            background #e4e4e4
-            font-size 62px
+          // .icon-person
+          //   background #e4e4e4
+          //   font-size 62px
+          .headPic
+              margin-right 1px
+              margin-bottom 15px
+              border-radius 50%
+              height 60px;
+              width 60px;
+                
+                
           .el-icon-s-custom
             background #e4e4e4
             font-size 62px
@@ -254,6 +269,7 @@
             color #fff
             &.user-info-top
               padding-bottom 8px
+              margin-left 10px
             .user-icon
               display inline-block
               margin-left -15px
@@ -266,6 +282,7 @@
             .icon-mobile-number
               font-size 14px
               color #fff
+              margin-left -5px
         .arrow
           width 12px
           height 12px
@@ -317,7 +334,7 @@
               color #6ac20b
     .profile_my_order
       top-border-1px(#e4e4e4)
-      margin-top 10px
+      margin-top 15px
       background #fff
       .my_order
         display flex
