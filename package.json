@@ -16,7 +16,7 @@
     "babel-plugin-component": "^1.1.1",
     "bootstrap": "^4.4.1",
     "element-ui": "^1.4.13",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "iview": "^3.5.4",
     "jsonp": "^0.2.1",
     "mint-ui": "^2.2.13",
